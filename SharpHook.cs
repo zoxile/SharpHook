@@ -14,7 +14,7 @@ using System.Collections.Generic;
 using System.Text.Json.Serialization;
 using Vector = CounterStrikeSharp.API.Modules.Utils.Vector;
 
-namespace JBHook
+namespace SharpHook
 {
     public class PlayerGrappleInfo
     {
@@ -28,9 +28,9 @@ namespace JBHook
 
 
     [MinimumApiVersion(125)]
-    public partial class JBHook : BasePlugin
+    public partial class SharpHook : BasePlugin
     {
-        public override string ModuleName => "JBHook";
+        public override string ModuleName => "SharpHook";
         public override string ModuleVersion => "1.0.0";
         public override string ModuleAuthor => "Zox, (Logic by DEAFPS) BIG THANKS TO DESTOER!)";
         private Dictionary<int, PlayerGrappleInfo> playerGrapples = new Dictionary<int, PlayerGrappleInfo>();
