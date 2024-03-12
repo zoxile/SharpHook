@@ -31,7 +31,7 @@ namespace SharpHook
     public partial class SharpHook : BasePlugin
     {
         public override string ModuleName => "SharpHook";
-        public override string ModuleVersion => "1.0.0";
+        public override string ModuleVersion => "0.0.1";
         public override string ModuleAuthor => "Zox, (Logic by DEAFPS) BIG THANKS TO DESTOER!)";
         private Dictionary<int, PlayerGrappleInfo> playerGrapples = new Dictionary<int, PlayerGrappleInfo>();
         private Dictionary<int, CCSPlayerController> connectedPlayers = new Dictionary<int, CCSPlayerController>();
@@ -224,7 +224,7 @@ namespace SharpHook
                     var playerSlot = player.Slot;
                     CCSPlayerController? playerusing = Utilities.GetPlayerFromSlot(player.Slot);
                     //bool use_key = (playerusing.Buttons & PlayerButtons.Use) == PlayerButtons.Use;
-                    CCSPlayerPawn? pawn = player.pawn();
+                    CCSPlayerPawn? pawn = player.PlayerPawn.Value;
 
                     if (pawn != null && pawn.AbsOrigin != null)
                     {
